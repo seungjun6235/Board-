@@ -10,7 +10,8 @@
             {{article.content}}
         </div>
         <div class="card-footer">
-            {{article.created_at}}
+            <p>{{article.created_at}}</p>
+            <a href="{% url 'articles:delete' id=article.id %}" class="btn btn-danger">delete</a>
         </div>
     </div>
 {% endblock %}
